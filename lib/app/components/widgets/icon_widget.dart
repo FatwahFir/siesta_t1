@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:siesta_t1/app/core/themes/theme.dart';
 
 class IconWidget extends StatelessWidget {
@@ -16,11 +17,11 @@ class IconWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 35,
-      height: 35,
+      width: 35.w,
+      height: 35.h,
       decoration: BoxDecoration(
         color: color.withOpacity(0.08),
-        borderRadius: BorderRadius.circular(4),
+        borderRadius: BorderRadius.circular(4.r),
       ),
       child: Center(
         child: Stack(
@@ -28,16 +29,16 @@ class IconWidget extends StatelessWidget {
             Icon(
               icon,
               color: color,
-              size: 20,
+              size: 20.h,
             ),
             Visibility(
               visible: isShowBadge,
-              child: const Positioned(
-                right: 2,
+              child: Positioned(
+                right: 2.w,
                 child: Icon(
                   Icons.circle,
                   color: red,
-                  size: 8,
+                  size: 8.h,
                 ),
               ),
             )

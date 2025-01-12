@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:siesta_t1/app/core/extensions/ctx.dart';
 
 class BannerWidget extends StatelessWidget {
@@ -9,15 +10,15 @@ class BannerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 140,
-      width: context.width,
+      height: 140.h,
+      width: context.width.w,
       child: Stack(
         children: [
           Container(
             clipBehavior: Clip.hardEdge,
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            height: context.height,
-            width: context.width,
+            padding: EdgeInsets.symmetric(horizontal: 20.w),
+            height: context.height.h,
+            width: context.width.w,
             decoration: BoxDecoration(
               image: const DecorationImage(
                 image: AssetImage(
@@ -35,7 +36,7 @@ class BannerWidget extends StatelessWidget {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
               ),
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(12.r),
             ),
             child: Row(
               children: [
@@ -54,18 +55,18 @@ class BannerWidget extends StatelessWidget {
                           backgroundColor:
                               WidgetStateProperty.all<Color>(context.tertiary),
                           padding: WidgetStateProperty.all<EdgeInsets>(
-                            const EdgeInsets.symmetric(
-                                horizontal: 20, vertical: 8),
+                            EdgeInsets.symmetric(
+                                horizontal: 20.w, vertical: 8.h),
                           ),
                           minimumSize: WidgetStateProperty.all<Size>(
-                            const Size(50, 20),
+                            Size(50.w, 20.h),
                           ),
                           tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                           shape:
                               WidgetStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(
-                                50,
+                                50.r,
                               ),
                             ),
                           ),
@@ -83,9 +84,9 @@ class BannerWidget extends StatelessWidget {
                     child: Transform(
                   alignment: Alignment.center,
                   transform: Matrix4.identity()
-                    ..scale(-1.8, 1.8), // Membalik secara horizontal
+                    ..scale(-1.75.w, 1.75.h), // Membalik secara horizontal
                   child: Padding(
-                    padding: const EdgeInsets.only(top: 12, left: 20),
+                    padding: EdgeInsets.only(top: 12.h, left: 20.w),
                     child: Image.asset(
                       'assets/images/banner.png',
                     ),
@@ -95,17 +96,17 @@ class BannerWidget extends StatelessWidget {
             ),
           ),
           Positioned(
-            bottom: 10,
-            right: 12,
+            bottom: 10.h,
+            right: 12.w,
             child: Container(
               height: 23,
-              width: context.width * 0.24,
+              width: 85,
               decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.circular(50),
+                borderRadius: BorderRadius.circular(50.r),
               ),
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8),
+                padding: EdgeInsets.symmetric(horizontal: 8.w),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: List.generate(
@@ -115,7 +116,7 @@ class BannerWidget extends StatelessWidget {
                       width: 15,
                       decoration: BoxDecoration(
                         color: index == 0 ? context.primary : context.outline,
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(10.r),
                       ),
                     ),
                   ),

@@ -20,20 +20,20 @@ final ThemeData theme = ThemeData(
   ),
   textTheme: const TextTheme(
     bodySmall: TextStyle(
-      fontSize: 14,
+      fontSize: 12,
       color: grey,
     ),
     bodyMedium: TextStyle(
-      fontSize: 16,
+      fontSize: 14,
       color: grey,
     ),
     titleMedium: TextStyle(
-      fontSize: 17,
+      fontSize: 16,
       color: black,
       fontWeight: FontWeight.bold,
     ),
     titleLarge: TextStyle(
-      fontSize: 20,
+      fontSize: 18,
       color: black,
       fontWeight: FontWeight.bold,
     ),

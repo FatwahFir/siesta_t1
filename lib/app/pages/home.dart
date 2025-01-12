@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:siesta_t1/app/components/fields/search_field.dart';
 import 'package:siesta_t1/app/components/widgets/banner_widget.dart';
@@ -22,7 +23,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(25, 25, 25, 0),
+          padding: EdgeInsets.fromLTRB(20.w, 20.h, 20.w, 0.h),
           child: SingleChildScrollView(
             child: Column(
               children: [
@@ -63,16 +64,16 @@ class _HomeState extends State<Home> {
                     )
                   ],
                 ),
-                const SizedBox(
-                  height: 30,
+                SizedBox(
+                  height: 25.h,
                 ),
                 const SearchField(),
-                const SizedBox(
-                  height: 20,
+                SizedBox(
+                  height: 20.h,
                 ),
                 const BannerWidget(),
-                const SizedBox(
-                  height: 10,
+                SizedBox(
+                  height: 10.h,
                 ),
                 RowTitleWidget(
                   text: 'Top Categories',
@@ -88,24 +89,23 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                 ),
-                const SizedBox(
-                  height: 10,
+                SizedBox(
+                  height: 10.h,
                 ),
                 RowTitleWidget(
                   text: 'Top Discount',
                   onPress: () {},
                 ),
                 ConstrainedBox(
-                  constraints: const BoxConstraints(maxHeight: 150),
+                  constraints: BoxConstraints(maxHeight: 150.h),
                   child: GridView.builder(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
                     itemCount: products.length,
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
-                      crossAxisSpacing: 14,
-                      mainAxisSpacing: 10,
+                      crossAxisSpacing: 14.w,
+                      mainAxisSpacing: 10.h,
                       childAspectRatio: 137 / 142,
                     ),
                     itemBuilder: (context, index) => ProductWidget(

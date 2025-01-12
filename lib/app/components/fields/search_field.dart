@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:siesta_t1/app/core/extensions/ctx.dart';
 
 class SearchField extends StatelessWidget {
@@ -12,31 +14,33 @@ class SearchField extends StatelessWidget {
       decoration: InputDecoration(
         prefixIconColor: context.inversPrimary,
         suffixIconColor: context.inversPrimary,
-        prefixIcon: const Padding(
-          padding: EdgeInsets.only(left: 10),
+        prefixIcon: Padding(
+          padding: EdgeInsets.only(left: 10.w),
           child: Icon(
-            Icons.search_rounded,
+            Iconsax.search_normal,
+            size: 20.h,
           ),
         ),
-        suffixIcon: const Padding(
-          padding: EdgeInsets.only(right: 10),
+        suffixIcon: Padding(
+          padding: EdgeInsets.only(right: 10.w),
           child: Icon(
-            Icons.sort,
+            Iconsax.sort,
+            size: 20.h,
           ),
         ),
-        contentPadding: const EdgeInsets.symmetric(
-          vertical: 5,
+        contentPadding: EdgeInsets.symmetric(
+          vertical: 5.h,
         ),
         hintText: 'Search menu, restaurant or etc',
         hintStyle: context.bodySmall,
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(50),
+          borderRadius: BorderRadius.circular(50.r),
           borderSide: BorderSide(
             color: context.outline,
           ),
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(50),
+          borderRadius: BorderRadius.circular(50.r),
           borderSide: BorderSide(
             color: context.primary,
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:siesta_t1/app/core/extensions/ctx.dart';
 
 class CategoryWidget extends StatelessWidget {
@@ -14,13 +15,13 @@ class CategoryWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 85,
+      height: 85.h,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           CircleAvatar(
             backgroundImage: AssetImage(image),
-            radius: 30,
+            radius: 30.h,
           ),
           Text(
             text,

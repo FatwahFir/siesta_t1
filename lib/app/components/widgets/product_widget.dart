@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:siesta_t1/app/core/extensions/ctx.dart';
 import 'package:siesta_t1/app/core/themes/theme.dart';
 
@@ -25,15 +26,15 @@ class ProductWidget extends StatelessWidget {
         children: [
           Container(
             width: context.width,
-            height: 97,
+            height: 97.h,
             decoration: BoxDecoration(
               image:
                   DecorationImage(image: AssetImage(image), fit: BoxFit.cover),
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(10.r),
             ),
           ),
-          const SizedBox(
-            height: 5,
+          SizedBox(
+            height: 5.h,
           ),
           Text(
             title,
@@ -41,8 +42,8 @@ class ProductWidget extends StatelessWidget {
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),
-          const SizedBox(
-            height: 5,
+          SizedBox(
+            height: 5.h,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -53,12 +54,12 @@ class ProductWidget extends StatelessWidget {
               ),
               Icon(
                 Icons.circle,
-                size: 5,
+                size: 5.h,
                 color: context.outline,
               ),
-              const Icon(
+              Icon(
                 Icons.star,
-                size: 18,
+                size: 18.h,
                 color: yellow,
               ),
               Text(
